@@ -1,0 +1,26 @@
+---
+title: "Documentação"
+author: "Claudiano Neto"
+date: 
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Arrecadação de Multas Ambientais por Bens tutelados.
+
+Apresenta o volume da arrecadação do Ibama com multas ambientais distribuídas 
+por bem tutelado, exemplo: Flora, Fauna. Os valores das multas estão fixados 
+em lei e aplicadas de acordo a tipificação da infração cometida.
+
+O criado dos dados é a **COORDENAÇÃO DO PROCESSO SANCIONADOR AMBIENTAL - COPSA**
+
+
+## Multas Ambientais Distribuídas por Bens Tutelados
+
+Apresenta Quantidade de Multas Ambientais Distribuídas por Bens Tutelados, exemplo: Flora, Fauna. Em síntese é disponibilizado aqui todos os AI lavrados com ou sem julgamento.
+
+
+Esse levantamento foi inspirado a partir de reportagem do [G1](https://g1.globo.com/natureza/amazonia/noticia/2020/10/31/apenas-3-de-quase-mil-autuacoes-aplicadas-pelo-ibama-por-desmate-na-amazonia-foram-quitadas-em-2020.ghtml)
