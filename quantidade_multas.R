@@ -3,6 +3,25 @@ library(magrittr)
 library(jsonlite)
 library(tidyverse)
 library(tibble)
+library(geobr)
+
+
+# Estudar como aplicar essa solução no meu trabalho final 
+
+# ufs <- unique(geobr::grid_state_correspondence_table$code_state)
+# for (i in ufs) {
+#   u <- stringr::str_glue("http://www.chancedegol.com.br/br{i}.htm")
+#   print(u)
+# }
+
+
+ufs <- unique(geobr::grid_state_correspondence_table$code_state)
+for (i in ufs) {
+  u <- stringr::str_glue("http://dadosabertos.ibama.gov.br/dados/SICAFI/{i}/Quantidade/multasDistribuidasBensTutelados.json")
+  print(u)
+}
+
+
 
 # Acessando os sites
 u_AL <- "http://dadosabertos.ibama.gov.br/dados/SICAFI/AL/Quantidade/multasDistribuidasBensTutelados.json"
@@ -220,4 +239,5 @@ quantidade_geral_multas <- list(quantidade_multa_AL, quantidade_multa_AC,
 
 # salvando a base em formato csv na pasta output 
 #  write_csv(quantidade_geral_multas, "output/1quantidade.csv")
+
 

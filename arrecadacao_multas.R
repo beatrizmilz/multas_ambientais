@@ -3,6 +3,27 @@ library(magrittr)
 library(jsonlite)
 library(tidyverse)
 library(tibble)
+library(geobr)
+
+
+# como desenvolver a solução abaixo no meu codigo?
+
+ufs <- unique(geobr::grid_state_correspondence_table$code_state)
+
+for (i in ufs) {
+  u <- stringr::str_glue("http://dadosabertos.ibama.gov.br/dados/SICAFI/{i}/Quantidade/multasDistribuidasBensTutelados.json")
+  print(u)
+} 
+
+  # url <- GET()
+
+  # dados_json <- httr::content(r_CE, "text") %>% 
+  # jsonlite::fromJSON() %>% 
+  # tibble::as_tibble()
+# arrec_AL <- tibble::glimpse(dados_json$data)
+
+
+
 
 # Acessando os sites
 u_AL <- "http://dadosabertos.ibama.gov.br/dados/SICAFI/AL/Arrecadacao/arrecadacaobenstutelados.json"
